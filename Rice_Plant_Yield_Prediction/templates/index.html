@@ -1,0 +1,198 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Yield Prediction</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+ <style>
+ body {
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ color: #fff;
+ text-align:center;
+ }
+  .scroll{
+    overflow-y:scroll; 
+    position:relative;
+    height: 100%;
+}
+input.a {
+display: none;
+}
+
+.custom-select select {
+ font-family: Arial;
+ background-color: #fff;
+ border: 1px solid transparent;
+ border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+ width: 350px;
+ height: 50px;
+ font-size: 125%;
+ color:#092756;
+}
+.lb {
+width: 250px;
+text-align: center;
+font-size: 125%;
+padding: 20px;
+}
+.bx {
+text-align:center;
+padding: 20px;
+}
+input {
+width: 350px;
+height: 50px;
+background-color: #fff;
+color: #092756;
+}
+
+body {
+background-image: url(static/css/Sand.jpg);
+}
+</style>
+</head>
+
+<body >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8">
+			<table style="border: 3px solid white; width: 650px; height: 75px; margin-left: 0px; margin-right: auto; margin-top: 50px; text-align: center;"> 
+					<tr>
+						<td>
+							<h1 style="align:center; margin-left: 10px; font-size: 175%;"> Rice Plant Yield Prediction </h1>
+						</td>
+					</tr>
+				</table>
+				<br> <br> 				
+				<table style="width:650px; height:300px; text-align:center; margin-left:0px; margin-right: auto; margin-top: auto; margin-bottom: 0;">
+				<form action="{{ url_for('predict')}}" method="post" name="form1" onsubmit="func()">
+					<div style="text-align:center; ">	
+						<tr>
+							<td class="lb">
+								<label>Area (in hectares):</label>
+							</td>
+							<td class="bx">
+								<input type="text" name="Area" placeholder="Area" required="required" />
+							</td>
+						</tr>
+						<tr>
+							<td class="lb">
+								<label>States:</label>
+							</td>
+							<td class="bx">
+								<div class="custom-select">
+									<select id="sel1">
+										<option value = "0">Andhra Pradesh</option>
+										<option value = "1">Karnataka</option>
+										<option value = "2">Kerala</option>
+										<option value = "3">Puducherry</option>
+										<option value = "4">Tamil Nadu</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						 <tr>
+							<td class="lb">
+								<label>Season:</label>
+							</td>
+							<td class="bx">
+								<div class="custom-select">
+									<select id="sel2">
+									   <option value = "0">Autumn</option>
+									   <option value = "1">Kharif</option>
+									   <option value = "2">Rabi</option>
+									   <option value = "3">Summer</option>
+									   <option value = "4">Winter</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="lb">
+								<button type="button" class="btn btn-primary btn-block btn-large" onclick="out()" style="font-size: 125%;">Clear</button>								
+							</td>
+							<td class="bx">
+								<button type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 125%;">Predict</button>
+							</td>
+						</tr>						
+					</div>					
+					<input class ="a" name="state_ap">
+					<input class ="a" name="state_ka" >
+					<input class ="a" name="state_ke" >
+					<input class ="a" name="state_pu" >
+					<input class ="a" name="state_tn">
+					<input class ="a" name="au">
+					<input class ="a" name="kh" >
+					<input class ="a" name="ra" >
+					<input class ="a" name="su" >
+					<input class ="a" name="wi" >
+				</form>
+				</table>
+				<br> <br>
+				<table id="tb1" style="border: 3px solid white; width: 650px; height: 75px; margin-left: 0px; margin-right: auto; margin-top: 0px; text-align: center;   "> 
+					<tr>
+						<td>
+							<h3> {{ prediction_text }} </h3>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-md-2">
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+    function func() {
+        var ele=document.getElementById("sel1");
+        var val = ele.options[ele.selectedIndex].value;
+           
+		arr =new Array(5);
+        arr.fill(0);
+        arr[Number(val)]=1;
+           
+        document.forms["form1"]["state_ap"].value= arr[0];
+	document.forms["form1"]["state_ka"].value= arr[1];
+	document.forms["form1"]["state_ke"].value= arr[2];
+	document.forms["form1"]["state_pu"].value= arr[3];
+	document.forms["form1"]["state_tn"].value= arr[4];
+           
+             
+        var ele1=document.getElementById("sel2");
+        var val1 = ele1.options[ele1.selectedIndex].value;
+            
+        arr1 =new Array(5);
+        arr1.fill(0);
+        arr1[Number(val1)]=1;
+            
+		document.forms["form1"]["au"].value= arr1[0];
+		document.forms["form1"]["kh"].value= arr1[1];
+		document.forms["form1"]["ra"].value= arr1[2];
+		document.forms["form1"]["su"].value= arr1[3];
+		document.forms["form1"]["wi"].value= arr1[4];
+		
+		
+    }
+		
+	function out(){
+		document.forms["form1"]["Area"].value="";
+		
+		var dropdown = document.getElementById("sel1");
+		dropdown.selectedIndex = 0;
+		
+		var dropdown1 = document.getElementById("sel2");
+		dropdown1.selectedIndex = 0;
+		
+		
+	}
+    </script>
+</html>
