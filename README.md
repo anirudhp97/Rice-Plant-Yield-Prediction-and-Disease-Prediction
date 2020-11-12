@@ -1,18 +1,16 @@
-# Final-Year-Project
+# Rice Plant Yield Prediction and Disease Prediction using Regression and Convolutional Neural Networks
 
-This repository contains Machine Learning Project which was undertaken for Final Year of Engineering (UG). <br>
-
--> Project title: Rice Plant Yield Prediction and Disease Prediction using Regression and Convolutional Neural Networks. <br>
+Predicting the yield of the rice plant and also early detection of a disease can help farmers take prompt actions and thus result in high productivity of the same, without compromising in it's quality. Thus this project is one such initiative which focuses on tackling both of these problem statements by creating concise objectives. <br>
 
 -> Project objectives: <br>
-(1) Predict the yield of the plant by collecting suitable dataset of the rice plant and understand the effect of the weather on the crop yield.<br>
-(2) Predict if the rice plant is going to be healthy or suffering from any disease (BrownSpot) <br>
+(2) Predict yield of the plant using Regression model based on the collected dataset and understand the influence of the weather on yield of the plant.<br>
+(1) Collect image dataset of rice and identify whether the plant is suffering from disease (BrownSpot) or is it healthy.<br>
 
 -> Algorithms used: <br>
 (1) Multiple Linear Regression. <br>
 (2) Convolutional Neural Networks. <br>
 
--> The Machine Learning Models are locally deployed using Flask. <br>
+-> The above mentioned models are locally deployed using Flask. <br>
 
 -> Libraries used for Regression Model: <br>
 (1) Pandas <br>
