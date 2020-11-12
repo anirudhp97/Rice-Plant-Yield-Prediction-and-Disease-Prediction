@@ -3,8 +3,8 @@
 Predicting the yield of the rice plant and also early detection of a disease can help farmers take prompt actions and thus result in high productivity of the same, without compromising in it's quality. Thus this project is one such initiative which focuses on tackling both of these problem statements by creating concise objectives. <br>
 
 -> Project objectives: <br>
-(2) Predict yield of the plant using Regression model based on the collected dataset and understand the influence of the weather on yield of the plant.<br>
-(1) Collect image dataset of rice and identify whether the plant is suffering from disease (BrownSpot) or is it healthy.<br>
+(1) Predict yield of the plant using Regression model based on the collected dataset and understand the influence of the weather on yield of the plant.<br>
+(2) Collect image dataset of rice and identify whether the plant is suffering from disease (BrownSpot) or is it healthy.<br>
 
 -> Algorithms used: <br>
 (1) Multiple Linear Regression. <br>
