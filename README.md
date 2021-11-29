@@ -12,29 +12,35 @@ Predicting the yield of the rice plant and also early detection of a disease can
 
 -> The above mentioned models are locally deployed using Flask. <br>
 
--> Libraries used for Regression Model: <br>
-(1) Pandas <br>
-(2) Numpy <br>
-(3) Scipy <br>
-(4) Scikit-Learn <br>
-(5) Matplotlib <br>
-(6) Seaborn <br>
-(7) Flask <br>
-(8) Pickle <br>
+-> Multiple Linear Regression: <br>
+(1) Dataset: Consists of 2+ lakhs data points and 7 features. <br>
 
--> Libraries used for Convolutional Neural Networks: <br>
-(1) Numpy <br>
-(2) Keras <br>
-(3) Scikit-Learn <br>
-(4) cv2 <br>
-(5) Matplotlib <br>
-(6) Flask <br>
+(2) Libraries: <br>
+(a) Pandas <br>
+(b) Numpy <br>
+(c) Scipy <br>
+(d) Scikit-Learn <br>
+(e) Matplotlib <br>
+(f) Seaborn <br>
+(g) Flask <br>
+(h) Pickle <br>
 
--> Tech stack for Web Interface: <br>
-(1) HTML <br>
-(2) CSS <br>
-(3) Javascript <br>
+-> Convolutional Neural Networks: <br>
+(1) Dataset: 2011 image data was collected combining both Healthy and Brownspot disease classes. <br>
 
--> Datasets: <br>
+(2) Libraries: <br>
+(a) Numpy <br>
+(b) Keras <br>
+(c) Scikit-Learn <br>
+(d) cv2 <br>
+(e) Matplotlib <br>
+(f) Flask <br>
+
+(3) Tech stack for Web Interface: <br>
+(a) HTML <br>
+(b) CSS <br>
+(c) Javascript <br>
+
+-> Links for the Datasets: <br>
 (1) Rice Yield Prediction: https://www.kaggle.com/c/fyp/data <br>
 (2) Rice Disease Prediction: https://www.kaggle.com/minhhuy2810/rice-diseases-image-dataset
