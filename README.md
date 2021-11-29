@@ -30,9 +30,11 @@ Predicting the yield of the rice plant and also early detection of a disease can
 (5) Matplotlib <br>
 (6) Flask <br>
 
--> Tools used for Web Interface: <br>
+-> Tech stack for Web Interface: <br>
 (1) HTML <br>
 (2) CSS <br>
 (3) Javascript <br>
 
--> The datasets of the project are available on the Kaggle Website.
+-> Datasets: <br>
+(1) Rice Yield Prediction: https://www.kaggle.com/c/fyp/data <br>
+(2) Rice Disease Prediction: https://www.kaggle.com/minhhuy2810/rice-diseases-image-dataset
