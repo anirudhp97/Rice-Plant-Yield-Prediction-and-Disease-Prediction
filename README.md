@@ -25,6 +25,9 @@ Predicting the yield of the rice plant and also early detection of a disease can
 (g) Flask <br>
 (h) Pickle <br>
 
+Rice Yield Prediction Output:
+![Flask_Output](https://user-images.githubusercontent.com/30742445/149911520-e79b6cdc-6022-4bf0-821c-0e30098dc115.png)
+
 -> Convolutional Neural Networks: <br>
 (1) Dataset: 2011 image data was collected combining both Healthy and Brownspot disease classes. <br>
 
@@ -40,6 +43,9 @@ Predicting the yield of the rice plant and also early detection of a disease can
 (a) HTML <br>
 (b) CSS <br>
 (c) Javascript <br>
+
+Rice Disease Prediction Output:
+![Flask_Output](https://user-images.githubusercontent.com/30742445/149914224-0708a1a4-0858-4e77-97f9-88063f38247d.png)
 
 -> Links for the Datasets: <br>
 (1) Rice Yield Prediction: https://www.kaggle.com/c/fyp/data <br>
